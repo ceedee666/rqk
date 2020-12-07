@@ -12,15 +12,15 @@
     "passport": "^0.4.1"
   },
   "devDependencies": {
-    "@sap/ux-specification": "^1.78.14",
-    "sqlite3": "^5",
-    "@sap/ui5-builder-webide-extension": "1.0.x",
-    "@ui5/cli": "2.2.6",
-    "eslint": "5.16.x",
     "@sap/eslint-plugin-ui5-jsdocs": "2.0.x",
+    "@sap/ui5-builder-webide-extension": "1.0.x",
+    "@sap/ux-specification": "^1.78.14",
     "@sapui5/ts-types": "1.71.x",
+    "@ui5/cli": "2.2.6",
     "bestzip": "2.1.4",
-    "rimraf": "3.0.2"
+    "eslint": "5.16.x",
+    "rimraf": "3.0.2",
+    "sqlite3": "^5"
   },
   "scripts": {
     "start": "npx cds run"
@@ -51,7 +51,8 @@
     }
   },
   "sapux": [
-    "app/managa-app"
+    "app/managa-app",
+    "app/manage-reviews-app"
   ],
   "ui5": {
     "dependencies": [
