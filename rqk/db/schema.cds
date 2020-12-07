@@ -12,4 +12,7 @@ entity Reviews : cuid, managed {
            };
   orderNumber : Integer;
   orderDate : Date;
+  customerName: String(100);
+  customerEmail: String(100);
+  virtual criticality : Integer;
 }
