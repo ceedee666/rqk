@@ -52,7 +52,8 @@
   },
   "sapux": [
     "app/managa-app",
-    "app/manage-reviews-app"
+    "app/manage-reviews-app",
+    "app/submit-review-app"
   ],
   "ui5": {
     "dependencies": [
