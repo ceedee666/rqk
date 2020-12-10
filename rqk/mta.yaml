@@ -35,4 +35,3 @@ build-parameters:
     commands:
     - npm install --production
     - npx -p @sap/cds-dk cds build --production
-
