@@ -23,7 +23,7 @@ resources:
 - name: rqk-db
   type: com.sap.xs.hdi-container
   parameters:
-    service: hana
+    service: hanatrial
     service-plan: hdi-shared
   properties:
     hdi-service-name: ${service-name}
