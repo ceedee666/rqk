@@ -1,4 +1,4 @@
-ID,orderNumber,orderDate,rating,text,status, customerName, customerEmail
+ID,orderNumber,orderDate,rating,text,status,customerName,customerEmail
 66465728-7a9e-4231-9e57-74f878f8b877,00000001,2020-01-01,0,,0,Max Maier,m@maier.de
 278acf9a-a7ca-42d7-8033-ba33193133ed,00000002,2020-01-01,3,Sehr unzufrieden,1,Jonny Ramone,jonny@ramones.com
 428bd000-a76d-4c23-9707-c5d65fc3bc56,00000042,2020-01-01,6,War alles ganz OK,1,Lemmy Kilmister,lemmy@hell.com

@@ -54,7 +54,6 @@
     }
   },
   "sapux": [
-    "app/managa-app",
     "app/manage-reviews-app",
     "app/submit-review-app"
   ],
