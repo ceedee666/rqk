@@ -1,4 +1,4 @@
-using { de.fhaachen.rqk as rqk} from '../db/schema';
+using { de.fhaachen.rqk as rqk} from '../../db/schema';
 
 annotate rqk.Reviews with @odata.draft.enabled;
 

@@ -1,4 +1,4 @@
-using ManageService as service from '../../srv/manage-service';
+using ReviewService as service from '../../../srv/review-service';
 
 annotate service.Reviews with @(
     UI : {
@@ -15,7 +15,6 @@ annotate service.Reviews with @(
         ],
         Facets: [
             {$Type: 'UI.ReferenceFacet', Label: '{i18n>reviewFacet}', Target: '@UI.FieldGroup#Review'},
-            {$Type: 'UI.ReferenceFacet', Label: '{i18n>adminFacet}', Target: '@UI.FieldGroup#Admin'},
         ],
 
         FieldGroup #HeaderGeneralInformation : {
@@ -33,16 +32,6 @@ annotate service.Reviews with @(
               {$Type: 'UI.DataFieldForAnnotation', Label: '{i18n>Rating}', Target: '@UI.DataPoint#RatingDP'},
               {Value: text},
            ]
-        },
-
-        FieldGroup#Admin: {
-            Data: [
-              {Value: status},
-              {Value: createdBy},
-              {Value: createdAt},
-              {Value: modifiedBy},
-              {Value: modifiedAt}
-            ]
         }
 
     }

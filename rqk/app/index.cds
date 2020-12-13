@@ -1,3 +1,3 @@
-using from './manage-reviews-app/annotations';
-using from './common';
-using from './submit-review-app/annotations';
+using from './webapp/manage-reviews-app/annotations';
+using from './webapp/common';
+using from './webapp/submit-review-app/annotations';

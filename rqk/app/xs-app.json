@@ -1,0 +1,25 @@
+{
+    "welcomeFile": "/index.html",
+    "authenticationMethod": "route",
+    "routes": [
+      {
+        "source": "/manage-service/(.*)$",
+        "target": "/manage-service/$1",
+        "authenticationType": "xsuaa",
+        "destination": "srv_api",
+        "csrfProtection": true
+      },
+      {
+        "source": "/review-service/(.*)$",
+        "target": "/review-service/$1",
+        "authenticationType": "xsuaa",
+        "destination": "srv_api",
+        "csrfProtection": true
+      },
+      {
+        "source": "^/(.*)$",
+        "target": "$1",
+        "localDir": "webapp"
+      }
+    ]
+  }
