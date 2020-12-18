@@ -1,65 +1,62 @@
 {
-  "name": "rqk",
-  "version": "1.0.0",
-  "description": "A simple CAP project.",
-  "repository": "<Add your repository here>",
-  "license": "UNLICENSED",
-  "private": true,
-  "dependencies": {
-    "@sap/cds": "^4.4.6",
-    "@sap/cds-dk": "^3.3.2",
-    "@sap/hana-client": "^2.6.61",
-    "cors": "^2.8.5",
-    "express": "^4",
-    "passport": "^0.4.1",
-    "swagger-ui-express": "^4.1.5"
-  },
-  "devDependencies": {
-    "@sap/eslint-plugin-ui5-jsdocs": "2.0.x",
-    "@sap/ui5-builder-webide-extension": "1.0.x",
-    "@sap/ux-specification": "^1.78.14",
-    "@sapui5/ts-types": "1.71.x",
-    "@ui5/cli": "2.2.6",
-    "bestzip": "2.1.4",
-    "eslint": "5.16.x",
-    "rimraf": "3.0.2",
-    "sqlite3": "^5"
-  },
-  "scripts": {
-    "start": "npx cds run"
-  },
-  "cds": {
-    "hana": {
-      "deploy-format": "hdbtable"
+    "name": "rqk",
+    "version": "1.0.0",
+    "description": "A simple CAP project.",
+    "repository": "<Add your repository here>",
+    "license": "UNLICENSED",
+    "private": true,
+    "dependencies": {
+        "@sap/cds": "^4.4.6",
+        "@sap/cds-dk": "^3.3.2",
+        "@sap/hana-client": "^2.6.61",
+        "@sap/xsenv": "^3.1.0",
+        "@sap/xssec": "^3.0.10",
+        "cors": "^2.8.5",
+        "express": "^4",
+        "passport": "^0.4.1",
+        "swagger-ui-express": "^4.1.5"
     },
-    "requires": {
-      "db": {
-        "kind": "sql"
-      },
-      "auth": {
-        "strategy": "mock",
-        "users": {
-          "demouser": {
-            "password": "passwd",
-            "roles": [
-              "rqk-admin"
-            ]
-          },
-          "demouser2": {
-            "password": "passwd",
-            "roles": []
-          }
+    "devDependencies": {
+        "@sap/eslint-plugin-ui5-jsdocs": "2.0.x",
+        "@sap/ui5-builder-webide-extension": "1.0.x",
+        "@sap/ux-specification": "^1.78.14",
+        "@sapui5/ts-types": "1.71.x",
+        "@ui5/cli": "2.2.6",
+        "bestzip": "2.1.4",
+        "eslint": "5.16.x",
+        "rimraf": "3.0.2",
+        "sqlite3": "^5"
+    },
+    "scripts": {
+        "start": "npx cds run"
+    },
+    "cds": {
+        "hana": {
+            "deploy-format": "hdbtable"
+        },
+        "requires": {
+            "db": {
+                "kind": "sql"
+            }
+        },
+        "[production]": {
+            "requires": {
+                "uaa": {
+                    "kind": "xsuaa"
+                },
+                "auth": {
+                    "strategy": "JWT"
+                }
+            }
         }
-      }
+    },
+    "sapux": [
+        "app/manage-reviews-app",
+        "app/submit-review-app"
+    ],
+    "ui5": {
+        "dependencies": [
+            "@sap/ui5-builder-webide-extension"
+        ]
     }
-  },
-  "sapux": [
-    "app/manage-reviews-app",
-    "app/submit-review-app"
-  ],
-  "ui5": {
-    "dependencies": [
-      "@sap/ui5-builder-webide-extension"
-    ]
-  }
 }

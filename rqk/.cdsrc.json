@@ -1,1 +1,19 @@
-{}
+{
+    "requires": {
+        "auth": {
+            "strategy": "mock",
+            "users": {
+                "demouser": {
+                    "password": "passwd",
+                    "roles": [
+                        "rqk-admin"
+                    ]
+                },
+                "demouser2": {
+                    "password": "passwd",
+                    "roles": []
+                }
+            }
+        }
+    }
+}

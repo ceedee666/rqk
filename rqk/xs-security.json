@@ -1,20 +1,21 @@
 {
   "xsappname": "rqk",
   "tenant-mode": "dedicated",
-  "description": "Security profile of called application",
   "scopes": [
     {
-      "name": "uaa.user",
-      "description": "UAA"
+      "name": "$XSAPPNAME.rqk-admin",
+      "description": "rqk-admin"
     }
   ],
+  "attributes": [],
   "role-templates": [
     {
-      "name": "Token_Exchange",
-      "description": "UAA",
+      "name": "rqk-admin",
+      "description": "generated",
       "scope-references": [
-        "uaa.user"
-      ]
+        "$XSAPPNAME.rqk-admin"
+      ],
+      "attribute-references": []
     }
   ]
 }
